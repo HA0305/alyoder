@@ -9,7 +9,7 @@
 
 ## 目录结构
 
-```
+```text
 ├── alibillget/        # 账单获取模块
 │   ├── main.go        # 调用阿里云 API 获取原始账单
 │   ├── go.mod
@@ -67,32 +67,32 @@ go build -o alibilloder
 
 ### alibillget
 
-| 参数 | 默认值 | 说明 |
-|------|--------|------|
-| `-cycle` | 当前月份 | 账单月份，格式 YYYY-MM |
-| `-dir` | `./` | CSV 输出目录 |
+| 参数     | 默认值   | 说明                       |
+|----------|----------|---------------------------------|
+| `-cycle` | 当前月份 | 账单月份，格式 YYYY-MM           |
+| `-dir`   | `./`     | CSV 输出目录                   |
 
 ### alibilloder
 
-| 参数 | 默认值 | 说明 |
-|------|--------|------|
-| `-input` | `./` | 原始 CSV 所在目录 |
-| `-output` | `./summary.csv` | 汇总 CSV 输出路径 |
-| `-userfile` | `./user_id.txt` | 用户ID映射文件 |
-| `-msg` | false | 启用推送消息生成模式 |
-| `-date` | 空 | 指定日期（YYYY-MM-DD），用于单日消息 |
-| `-asset` | 空 | 指定资产ID过滤 |
-| `-msgdir` | 与 -output 同级 | 消息文件输出目录 |
+| 参数        | 默认值           | 说明                                 |
+|-------------|------------------|----------------------------------------------|
+| `-input`    | `./`             | 原始 CSV 所在目录                        |
+| `-output`   | `./summary.csv`  | 汇总 CSV 输出路径                        |
+| `-userfile` | `./user_id.txt`  | 用户ID映射文件                           |
+| `-msg`      | false            | 启用推送消息生成模式                     |
+| `-date`     | 空               | 指定日期（YYYY-MM-DD），用于单日消息   |
+| `-asset`    | 空               | 指定资产ID过滤                           |
+| `-msgdir`   | 与 -output 同级  | 消息文件输出目录                     |
 
 ## 输出文件说明
 
-| 文件 | 说明 |
-|------|------|
-| `bill_YYYY-MM_*.csv` | 原始账单（39列，UTF-8 BOM） |
-| `summary.csv` | 按资产ID+日期汇总的应付金额 |
-| `sumall_msg.txt` | 所有日期的每日账单消息 |
-| `sumID_msg.txt` | 本月各资产ID综合汇总 |
-| `sumsend_msg.txt` | 指定日期的单日账单消息 |
+| 文件                 | 说明                          |
+|----------------------|-------------------------------|
+| `bill_YYYY-MM_*.csv` | 原始账单（39列，UTF-8 BOM）   |
+| `summary.csv`        | 按资产ID+日期汇总的应付金额   |
+| `sumall_msg.txt`     | 所有日期的每日账单消息        |
+| `sumID_msg.txt`      | 本月各资产ID综合汇总          |
+| `sumsend_msg.txt`    | 指定日期的单日账单消息        |
 
 ## License
 
