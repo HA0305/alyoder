@@ -1,0 +1,17 @@
+# 编译产物
+alibillget/alibillget
+alibillget/alibillget.exe
+alibilloder/alibilloder
+alibilloder/alibilloder.exe
+
+# 数据文件（含敏感信息）
+alibillget/*.csv
+alibilloder/summary*.csv
+alibillsend/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
